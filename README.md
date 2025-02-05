@@ -31,7 +31,7 @@ Click Reset to clear the time and lap records.
 
 📂 Installation & Setup
 Clone the repository:
-git clone https://github.com/anannya-99/stopwatch-app.git
+git clone https://github.com/anannya-99/PRODIGY_WD_02
 Open the index.html file in a browser.
 
 🎯 Future Improvements
