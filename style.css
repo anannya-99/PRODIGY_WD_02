@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background: black;;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.stopwatch {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.timer-icon {
+    display: inline-block;
+    padding: 1rem;
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.timer {
+    color: #60a5fa;
+}
+
+#display {
+    font-size: 3.5rem;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.start {
+    background-color: #22c55e;
+}
+
+.start:hover:not(:disabled) {
+    background-color: #16a34a;
+}
+
+.start.running {
+    background-color: #ef4444;
+}
+
+.start.running:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.lap {
+    background-color: #3b82f6;
+}
+
+.lap:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.reset {
+    background-color: #4b5563;
+}
+
+.reset:hover:not(:disabled) {
+    background-color: #374151;
+}
+
+.laps {
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.laps.hidden {
+    display: none;
+}
+
+.laps h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+#lapsList {
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.lap-item:last-child {
+    border-bottom: none;
+}
+
+.lap-time {
+    font-family: monospace;
+}
